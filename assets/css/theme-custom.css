@@ -85,10 +85,15 @@ color: var(--base-color);
   margin-left: 0;
   font-size: 14px;
   letter-spacing: 0.2pt;
-    font-weight: bold;
 }
+.sidebar-nav #toc ol > li {
+        text-indent: -20px;
+      }
+.sidebar-nav #toc ol > li:before {
+        content: "-";
+        text-indent: -20px;
+      }
 .sidebar-nav #toc ol li ol {
-    font-weight: normal;
 }
 #toc ol li ol li ol {
   display: none;
