@@ -79,13 +79,16 @@ color: var(--base-color);
 }
 
 /*toc from Fidus*/
-#toc ol li {
+.sidebar-nav #toc ol li {
  list-style-type:none;
   color: black;
   margin-left: 0;
-  margin-left: 0;
-  text-indent: 0;
+  font-size: 14px;
   letter-spacing: 0.2pt;
+    font-weight: bold;
+}
+.sidebar-nav #toc ol li ol {
+    font-weight: normal;
 }
 #toc ol li ol li ol {
   display: none;
