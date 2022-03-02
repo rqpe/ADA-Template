@@ -87,8 +87,8 @@ color: var(--base-color);
   text-indent: 0;
   letter-spacing: 0.2pt;
 }
-#toc ol li ol {
- display: none;
+#toc ol li ol li ol {
+  display: none;
 }
 /* Table of Contents*/
 section.content > aside.nav > .page_toc {
