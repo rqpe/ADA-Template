@@ -78,6 +78,18 @@ color: var(--base-color);
   transition:none !important;
 }
 
+/*toc from Fidus*/
+#toc ol li {
+ list-style-type:none;
+  color: black;
+  margin-left: 0;
+  margin-left: 0;
+  text-indent: 0;
+  letter-spacing: 0.2pt;
+}
+#toc ol li ol {
+ display: none;
+}
 /* Table of Contents*/
 section.content > aside.nav > .page_toc {
   top: 80px !important;
