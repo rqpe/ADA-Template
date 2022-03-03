@@ -173,12 +173,42 @@ color: var(--base-color);
 .content .markdown-section nav li ol ol {
   display: block !important;
 }
+.content .markdown-section table {
+  margin: 0 auto;
+  width: 99% !important;
+  font-family: "Open Sans", helvetica neue, arial, sans-serif;
+  background-size: 8pt;
+  page-break-inside: avoid;
+  border-collapse: collapse;
+  border-left: 0;
+  border-right: 0;
+  text-align: left;
+  font-size: 8pt;
+}
+
+.content .markdown-section table th {
+  border-left: 0;
+  border-right: 0;
+  padding: 0em 1em;
+  font-size: 12px;
+  color: : black;
+  font-weight: 700;
+  font-style: italic;
+  background-color: rgb(241,248,250);
+  border-bottom: 2px solid #003F97;
+}
 .content .markdown-section table caption, .content .markdown-section figure figcaption {
     font-size: 0.8rem;
     margin: 0.5em 0 0.75em;
     text-align: left;
     font-style: normal;
     font-weight: 300;
+}
+.content .markdown-section figure {
+    border: none;
+}
+.content .markdown-section figure.aligned-left.image-width-50 {
+  margin-right: 20px;
 }
 /* Table of Contents*/
 section.content > aside.nav > .page_toc {
