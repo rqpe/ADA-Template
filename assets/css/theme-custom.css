@@ -4,16 +4,16 @@
     --base-font-size                                  : 16px;
     --base-font-family                                : "Open sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif; /*--base-color: var(--mono-shade2);*/
     --link-color                                      : #000; /*#0A75BD*/
-    --link-color--hover                               : #EE868F;
-    --link-border-bottom--hover                       : #EE868F;
+    --link-color--hover                               : #f39200;
+    --link-border-bottom--hover                       : #f39200;
     --link-text-decoration                            : underline;
     --link-text-decoration-color                      : #000;
     --sidebar-name-color                              : #000;
-    --sidebar-background                              : #DCD0C5;
+    --sidebar-background                              : #C9D5DE;
     --sidebar-nav-link-color--active                  : #4D4D4D;
     --cover-heading-font-size-max                     : 40;
     --cover-heading-font-size-min                     : 34;
-    --blockquote-border-color                         : #EE868F;
+    --blockquote-border-color                         : #f39200;
     --heading-font-family                             : "IBM Plex Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
     --heading-h2-font-size: var(--font-size-xl);
     --heading-h3-border-style: solid;
@@ -25,7 +25,7 @@
     --heading-h5-font-weight: 500;
     --heading-h6-font-size: var(--font-size-xs);
     --sidebar-nav-link-font-weight--active            : bold;
-    --sidebar-border-color                            : #BAB3AC;
+    --sidebar-border-color                            : rgb(174,182,187);
     --sidebar-width                                   : 22rem;
     --sidebar-nav-pagelink-background-position        : 3px 10px;
     --sidebar-nav-pagelink-background-position--active: 3px 10px; /*left center*/
@@ -51,6 +51,60 @@
     font-weight: var(--heading-h4-font-weight, var(--heading-font-weight));
     color: var(--heading-h4-color, var(--heading-color));
 }*/
+
+/*.content .markdown-section .article-title {
+  font-family: "Open sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #003F97;
+  margin-top: 2em;
+}*/
+
+.content .markdown-section nav::before {
+    content: "";
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    line-height: 1.25em;
+    color: #001949;
+    display: block;
+    height: 0px;
+}
+.sidebar nav {
+  padding: 0;
+}
+.content .markdown-section table {
+  display: table!important;
+}
+
+.markdown-section h1, .content .markdown-section .article-title {
+    margin: var(--heading-h1-margin, var(--heading-margin));
+    padding: var(--heading-h1-padding, var(--heading-padding));
+    border-width: var(--heading-h1-border-width, 0);
+    border-style: var(--heading-h1-border-style);
+    border-color: var(--heading-h1-border-color);
+    font-family: var(--heading-h1-font-family, var(--heading-font-family));
+    font-size: var(--heading-h1-font-size);
+    font-weight: var(--heading-h1-font-weight, var(--heading-font-weight));
+    line-height: var(--base-line-height);
+    color: var(--heading-h1-color, var(--heading-color));
+}
+
+.content .markdown-section h1.article-bibliography-header {
+    margin: var(--heading-h2-margin, var(--heading-margin));
+    padding: var(--heading-h2-padding, var(--heading-padding));
+    border-width: var(--heading-h2-border-width, 0);
+    border-style: var(--heading-h2-border-style);
+    border-color: var(--heading-h2-border-color);
+    font-family: var(--heading-h2-font-family, var(--heading-font-family));
+    font-size: var(--heading-h2-font-size);
+    font-weight: var(--heading-h2-font-weight, var(--heading-font-weight));
+    line-height: var(--base-line-height);
+    color: var(--heading-h2-color, var(--heading-color));
+} /*.markdown-section h2*/
+
+.content .markdown-section .csl-entry {
+margin-bottom: 0.8rem;
+}
 main > .content {
     margin-top: 30px;
 }
@@ -81,11 +135,12 @@ color: var(--base-color);
 /*toc from Fidus*/
 .sidebar-nav #toc ol li {
  list-style-type:none;
-  color: black;
   margin-left: 0;
-  font-size: 14px;
+  padding-left: 0;
+  font-size: 0.8rem;
   letter-spacing: 0.2pt;
 }
+
 /*.sidebar-nav #toc ol > li {
         text-indent: -20px;
       }
@@ -93,10 +148,16 @@ color: var(--base-color);
         content: "-";
         text-indent: -20px;
       }*/
-.sidebar-nav #toc ol li ol {
-}
+
 #toc ol li ol li ol {
   display: none;
+}
+.content .markdown-section .tocpage a {
+  text-decoration: none!important;
+  font-size: 1rem;
+}
+.content .markdown-section .tocpage ol li ol li ol li ol {
+  display: none!important;
 }
 /* Table of Contents*/
 section.content > aside.nav > .page_toc {
