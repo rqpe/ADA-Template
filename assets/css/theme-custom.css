@@ -76,6 +76,9 @@
   display: table!important;
 }
 
+.content .markdown-section .titlepage {
+  text-align: center;
+}
 .markdown-section h1, .content .markdown-section .article-title {
     margin: var(--heading-h1-margin, var(--heading-margin));
     padding: var(--heading-h1-padding, var(--heading-padding));
@@ -104,6 +107,7 @@
 
 .content .markdown-section .csl-entry {
 margin-bottom: 0.8rem;
+font-size: 0.8rem;
 }
 main > .content {
     margin-top: 30px;
@@ -156,8 +160,25 @@ color: var(--base-color);
   text-decoration: none!important;
   font-size: 1rem;
 }
-.content .markdown-section .tocpage ol li ol li ol li ol {
+
+.content .markdown-section .tocpage ol {
+ list-style-type:none;
+ margin-left: 0;
+
+}
+.content .markdown-section .tocpage nav li ol li ol li ol li {
   display: none!important;
+}
+
+.content .markdown-section nav li ol ol {
+  display: block !important;
+}
+.content .markdown-section table caption, .content .markdown-section figure figcaption {
+    font-size: 0.8rem;
+    margin: 0.5em 0 0.75em;
+    text-align: left;
+    font-style: normal;
+    font-weight: 300;
 }
 /* Table of Contents*/
 section.content > aside.nav > .page_toc {
