@@ -210,6 +210,7 @@ color: var(--base-color);
 .content .markdown-section figure.aligned-left.image-width-50 {
   margin-right: 20px;
 }
+
 /* Table of Contents*/
 section.content > aside.nav > .page_toc {
   top: 80px !important;
@@ -228,15 +229,13 @@ aside.nav > .page_toc .active {
   padding-left: 10px;
   font-weight: bold;
 }
-/*aside.nav > .page_toc ul a:hover.active span {
-  color: grey !important;
-}*/
+
 aside.nav > .page_toc li strong {
   font-weight: normal;
   color: inherit !important;
 }
 aside.nav > .page_toc .active strong {
-  font-weight: bold;
+  /*font-weight: bold;*/
   color: inherit !important;
 }
 
@@ -253,11 +252,29 @@ nav.app-nav li a, nav.app-nav li a:visited {
 }
 
 /* Sidebar */
-.sidebar-nav, .sidebar nav { font-size: 14px; }
+.sidebar-nav, .sidebar nav { font-size: 0.9rem; }
 .sidebar-nav a, .sidebar nav a {
   white-space: normal;
   display:block;
   overflow: visible;
+}
+.sidebar-nav a {
+  letter-spacing: .1em;
+  transition: text-shadow .3s;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a:active {
+text-shadow: 0 0 .50px #333, 0 0 .50px #333;
+  -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  /* use the line below if you want a more intense effect */
+  /* text-shadow: 0 0 .9px #333, 0 0 .9px #333, 0 0 .9px #333; */
+  text-decoration: none!important;
 }
 .sidebar .search input[type="search"]:focus {
   -webkit-box-shadow: none;
