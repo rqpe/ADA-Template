@@ -261,20 +261,12 @@ nav.app-nav li a, nav.app-nav li a:visited {
 .sidebar-nav a {
   letter-spacing: .1em;
   transition: text-shadow .3s;
-}
-
-.sidebar-nav a:hover, .sidebar-nav a:active {
-text-shadow: 0 0 .50px #333, 0 0 .50px #333;
-  -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
+}.sidebar-nav a:hover, .sidebar-nav a:active {
+    text-shadow: 0 0 .50px #33333370, 0 0 .50px #33333370;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-  /* use the line below if you want a more intense effect */
-  /* text-shadow: 0 0 .9px #333, 0 0 .9px #333, 0 0 .9px #333; */
-  text-decoration: none!important;
+    text-decoration: none!important;
 }
 .sidebar .search input[type="search"]:focus {
   -webkit-box-shadow: none;
