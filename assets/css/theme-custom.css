@@ -138,20 +138,24 @@ color: var(--base-color);
 
 /*toc from Fidus*/
 .sidebar-nav #toc ol li {
- list-style-type:none;
+ list-style-type: none;
   margin-left: 0;
   padding-left: 0;
   font-size: 0.8rem;
-  letter-spacing: 0.2pt;
 }
-
-/*.sidebar-nav #toc ol > li {
-        text-indent: -20px;
-      }
-.sidebar-nav #toc ol > li:before {
-        content: "-";
-        text-indent: -20px;
-      }*/
+.sidebar-nav #toc ol li::before {
+  content: "\f103";
+  font-family: 'FontAwesome';
+  float: left;
+  margin-left: -1.5em;
+}
+.sidebar-nav #toc ol ol li::before {
+  content: '';
+  margin-left: 0em;
+}
+.sidebar-nav #toc ol ol li {
+    list-style-type: "- ";
+}
 
 #toc ol li ol li ol {
   display: none;
@@ -210,6 +214,31 @@ color: var(--base-color);
 .content .markdown-section figure.aligned-left.image-width-50 {
   margin-right: 20px;
 }
+/* Footnotes*/
+
+.content .markdown-section section.fnlist {
+  display: block!important;
+  font-size: 0.8rem;
+  margin-top:2rem;
+}
+.content .markdown-section  .footnote-counter::before {
+      content: attr(data-book-counter); /* or data-chapter-counter */
+  }
+
+.content .markdown-section  section[role=doc-footnote] .footnote-counter::after {
+      content: '. ';
+  }
+
+  section[role=doc-footnote]:first-of-type::before {
+      content: 'Footnote';
+      display: block;
+      border-bottom: 1px solid black;
+    }
+
+section[role=doc-footnote]:first-of-type {
+
+
+  }
 
 /* Table of Contents*/
 section.content > aside.nav > .page_toc {
@@ -259,9 +288,11 @@ nav.app-nav li a, nav.app-nav li a:visited {
   overflow: visible;
 }
 .sidebar-nav a {
-  letter-spacing: .1em;
+  /*letter-spacing: .1em;*/
   transition: text-shadow .3s;
-}.sidebar-nav a:hover, .sidebar-nav a:active {
+}
+
+.sidebar-nav a:hover, .sidebar-nav a:active {
     text-shadow: 0 0 .50px #33333370, 0 0 .50px #33333370;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
