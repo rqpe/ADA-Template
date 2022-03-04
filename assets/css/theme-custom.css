@@ -145,7 +145,7 @@ color: var(--base-color);
 }
 .sidebar-nav #toc ol li::before {
   content: "\f103";
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome 6 Free";
   float: left;
   margin-left: -1.5em;
 }
