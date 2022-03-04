@@ -144,8 +144,11 @@ color: var(--base-color);
   font-size: 0.8rem;
 }
 .sidebar-nav #toc ol li::before {
-  content: "\f103";
-  font-family: "Font Awesome 6 Free";
+  content: '\f107';
+  /*font-family: "Font Awesome 6 Free";*/
+  font: var(--fa-font-solid);
+  line-height: 2;
+  font-weight: 900;
   float: left;
   margin-left: -1.5em;
 }
