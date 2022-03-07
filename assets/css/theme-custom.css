@@ -15,15 +15,18 @@
     --cover-heading-font-size-min                     : 34;
     --blockquote-border-color                         : #f39200;
     --heading-font-family                             : "IBM Plex Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
-    --heading-h2-font-size: var(--font-size-xl);
+    --heading-h1-font-size: 3rem;
+    --heading-h1-font-weight: 800;
+    --heading-h2-font-size: 2rem;/*var(--font-size-xl)*/
     --heading-h3-border-style: solid;
-    --heading-h3-font-size: var(--font-size-l);
+    --heading-h3-font-size: 1.6rem; /*var(--font-size-l)*/
+    --heading-h3-font-weight: 500;
     --heading-h4-border-style: solid;
-    --heading-h4-font-size: var(--font-size-m);
+    --heading-h4-font-size: 1.3rem; /*var(--font-size-m)*/
     --heading-h4-font-weight: 500;
-    --heading-h5-font-size: var(--font-size-s);
+    --heading-h5-font-size: 1.1rem; /*var(--font-size-s)*/
     --heading-h5-font-weight: 500;
-    --heading-h6-font-size: var(--font-size-xs);
+    --heading-h6-font-size: 0.9rem; /*var(--font-size-xs)*/
     --sidebar-nav-link-font-weight--active            : bold;
     --sidebar-border-color                            : rgb(174,182,187);
     --sidebar-width                                   : 22rem;
@@ -34,49 +37,23 @@
     --sidebar-nav-pagelink-background-image--collapse : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='11.2' viewBox='0 0 7 11.2'%3E%3Cpath d='M1.5 1.5l4 4.1 -4 4.1' stroke-width='1.5' stroke='black' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
     --sidebar-nav-pagelink-background-image--loaded   : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='black' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
 }
-
-/*:root{--base-background-color: #fff;--base-color: var(--mono-shade2);
-  --base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --base-font-size: 16px;
-  --base-font-weight: normal;
-  --base-line-height: 1.7;--emoji-size: calc(var(--base-line-height) * 1em);--hr-border: 1px solid var(--mono-tint2);--mark-background: #ffecb3;--pre-font-family: var(--code-font-family);--pre-font-size: var(--code-font-size);--pre-font-weight: normal;--selection-color: #b4d5fe;
-  --small-font-size: var(--font-size-s);
-  --strong-color: var(--heading-color);--strong-font-weight: 600;
-  --subsup-font-size: var(--font-size-s)}:root{--content-max-width: 55em;--blockquote-background: var(--mono-tint3);--blockquote-border-style: solid;--blockquote-border-radius: var(--border-radius-m);--blockquote-em-font-weight: normal;--blockquote-font-weight: normal;--code-font-family: Inconsolata, Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;--code-font-size: calc(var(--font-size-m) * 0.95);--code-font-weight: normal;--code-tab-size: 4;--code-block-border-radius: var(--border-radius-m);--code-block-line-height: var(--base-line-height);--code-block-margin: 1em 0;--code-block-padding: 1.75em 1.5em 1.5em 1.5em;--code-inline-background: var(--code-theme-background);--code-inline-border-radius: var(--border-radius-s);--code-inline-color: var(--code-theme-text);--code-inline-margin: 0 0.15em;--code-inline-padding: 0.125em 0.4em;--code-theme-background: var(--mono-tint3);--heading-color: var(--mono-shade3);--heading-margin: 2.5rem 0 0;--heading-h1-border-style: solid;--heading-h1-font-size: var(--font-size-xxl);--heading-h2-border-style: solid;
-
-
-.markdown-section h4 {
-    font-family: var(--heading-h4-font-family,var(--heading-font-family));
-    font-size: var(--heading-h4-font-size);
-    font-weight: var(--heading-h4-font-weight, var(--heading-font-weight));
-    color: var(--heading-h4-color, var(--heading-color));
-}*/
-
-/*.content .markdown-section .article-title {
-  font-family: "Open sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #003F97;
-  margin-top: 2em;
-}*/
-
 .content .markdown-section nav::before {
     content: "";
-    font-family: "Sora", sans-serif;
+    /*font-family: "Sora", sans-serif;
     font-weight: 600;
     line-height: 1.25em;
     color: #001949;
     display: block;
-    height: 0px;
+    height: 0px;*/
 }
-.sidebar nav {
-  padding: 0;
+.sidebar-nav li {
+  padding-left: 0.8rem;
 }
 .content .markdown-section table {
   display: table!important;
 }
 
-.content .markdown-section .titlepage {
+.content .markdown-section .booktitle, .content .markdown-section .titlepage {
   text-align: center;
 }
 .markdown-section h1, .content .markdown-section .article-title {
@@ -90,6 +67,7 @@
     font-weight: var(--heading-h1-font-weight, var(--heading-font-weight));
     line-height: var(--base-line-height);
     color: var(--heading-h1-color, var(--heading-color));
+    text-align: left;
 }
 
 .content .markdown-section h1.article-bibliography-header {
@@ -105,9 +83,62 @@
     color: var(--heading-h2-color, var(--heading-color));
 } /*.markdown-section h2*/
 
+.content .markdown-section h3.bookauthor {
+      font-size: var(--heading-h4-font-size);
+}
+
+.content .markdown-section p {
+  font-size: var(--base-font-size);
+  font-family: var(--base-font-family);
+  line-height: 1.6rem;
+  letter-spacing: normal;
+  word-spacing: normal;
+  orphans: 0;
+  widows: 0;
+}
+
+.content .markdown-section li p {
+    display: block;
+}
+
+.sidebar-nav  p {
+  font-family: var(--base-font-family);
+}
+
+.ready hr {
+  height: 0;
+  margin: 2em 0;
+  border: none;
+  border-bottom: var(--hr-border, 0);
+}
+
+.content .markdown-section table caption:before {
+  content: "";
+  margin-right: 0em;
+}
+.content .markdown-section table caption {
+   padding-left: 0;
+}
+
+.content .markdown-section .article-body ol {
+  font-size: var(--base-font-size);
+  font-family: var(--base-font-family);
+  line-height: 1.6rem;
+}
+.content .markdown-section a {
+  text-decoration: underline !important;
+  border-bottom: none!important;
+}
+
+.content .markdown-section blockquote:before {
+    content: "";
+}
+
 .content .markdown-section .csl-entry {
 margin-bottom: 0.8rem;
-font-size: 0.8rem;
+font-size: var(--base-font-size);
+font-family: var(--base-font-family);
+line-height: 1.5rem;
 }
 main > .content {
     margin-top: 30px;
@@ -145,7 +176,6 @@ color: var(--base-color);
 }
 .sidebar-nav #toc ol li::before {
   content: '\f107';
-  /*font-family: "Font Awesome 6 Free";*/
   font: var(--fa-font-solid);
   line-height: 2;
   font-weight: 900;
@@ -167,6 +197,17 @@ color: var(--base-color);
   text-decoration: none!important;
   font-size: 1rem;
 }
+.content .markdown-section .tocpage ol li::before {
+  content: '\f107';
+  font: var(--fa-font-solid);
+  line-height: 1.5;
+  float: left;
+  margin-left: -1.5em;
+}
+.content .markdown-section .tocpage ol ol li::before {
+  content: '';
+  margin-left: 0em;
+}
 
 .content .markdown-section .tocpage ol {
  list-style-type:none;
@@ -179,6 +220,9 @@ color: var(--base-color);
 
 .content .markdown-section nav li ol ol {
   display: block !important;
+}
+.sidebar nav ul {
+  padding-left: 0.8rem;
 }
 .content .markdown-section table {
   margin: 0 auto;
@@ -202,7 +246,7 @@ color: var(--base-color);
   font-weight: 700;
   font-style: italic;
   background-color: rgb(241,248,250);
-  border-bottom: 2px solid #003F97;
+  border-bottom: 2px solid #0B87DA;
 }
 .content .markdown-section table caption, .content .markdown-section figure figcaption {
     font-size: 0.8rem;
@@ -224,6 +268,9 @@ color: var(--base-color);
   font-size: 0.8rem;
   margin-top:2rem;
 }
+.content .markdown-section section.fnlist p {
+  font-size: 0.8rem;
+}
 .content .markdown-section  .footnote-counter::before {
       content: attr(data-book-counter); /* or data-chapter-counter */
   }
@@ -238,10 +285,6 @@ color: var(--base-color);
       border-bottom: 1px solid black;
     }
 
-section[role=doc-footnote]:first-of-type {
-
-
-  }
 
 /* Table of Contents*/
 section.content > aside.nav > .page_toc {
@@ -315,50 +358,3 @@ nav.app-nav li a, nav.app-nav li a:visited {
   height: 0; overflow: hidden;
   max-width: 100%;
 }
-
-ol.numeric-decimals { counter-reset:section; list-style-type:none; list-style-position: outside; padding-left: 0;}
-ol.numeric-decimals li { list-style-type:none;
-  margin-top: 0.3em;
-  color: black;
-  margin-left: 0;
-  margin-left: 0;
-  text-indent: 0;
-  letter-spacing: 0.2pt;
-  /*word-spacing: 0px;
-  font-size: 9pt;*/
-}
-ol.numeric-decimals li ol { counter-reset:subsection; }
-ol.numeric-decimals li:before{
-    counter-increment:section;
-    content:counter(section) ". ";/*content:"Section " counter(section) ". ";*/
-}
-ol.numeric-decimals li ol li:before {
-    counter-increment:subsection;
-    content:counter(section) "." counter(subsection) " ";
-}
-
-/*3 level*/
-ol.numeric-decimals li ol li ol { counter-reset:subsubsection; }
-ol.numeric-decimals li ol li:before{
-    counter-increment:subsection;
-    content:counter(section) "." counter(subsection) " ";
-}
-ol.numeric-decimals li ol li ol li:before {
-    counter-increment:subsubsection;
-    content:counter(section) "." counter(subsection) "." counter(subsubsection) " ";
-}
-
-/*None level*/
-ol.numeric-decimals li.none:before {
-    content: " ";
-}
-/*#table-of-contents ol {
- list-style: none;
- counter-reset: section;
-}
-#table-of-contents ol li {
- counter-increment: section;
-}
-#table-of-contents li::before {
- content: counter(section, ".");
-}*/
